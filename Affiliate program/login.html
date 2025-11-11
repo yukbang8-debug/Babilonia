@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register - Program Afiliasi</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container auth-container">
+
+    <div id="login-form" class="auth-form">
+      <h2 class="text-accent">Selamat Datang Kembali!</h2>
+      <p class="text-center">Silahkan masuk untuk melanjutkan</p>
+
+      <form action="dashboard.html" method="get"> <input type="hidden" name="test-user" value="boys@gmail.com">
+        <input type="hidden" name="test-pass" value="bali2000">
+
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" value="boys@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" value="bali2000" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Login</button>
+        
+        <div class="text-center" style="margin-top: 15px;">
+          <a href="#" id="show-reset-modal"><strong>Lupa Password?</strong></a>
+        </div>
+      </form>
+      
+      <div class="auth-toggle">
+        <p>Belum punya akun? <a href="#" id="show-register-form"><strong>Daftar di sini</strong></a></p>
+      </div>
+    </div>
+
+    <div id="register-form" class="auth-form hidden"> <h2 class="text-accent">Gabung Gratis!</h2>
+      <p class="text-center">Daftar sekarang, 100% Gratis.</p>
+
+      <form action="dashboard.html" method="get"> <div class="form-group">
+          <label for="reg-username">Username</label>
+          <input type="text" id="reg-username" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-hp">Nomor HP</label>
+          <input type="tel" id="reg-hp" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-confirm-password">Konfirmasi Password</label>
+          <input type="password" id="reg-confirm-password" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+      </form>
+      
+      <div class="auth-toggle">
+        <p>Sudah punya akun? <a href="#" id="show-login-form"><strong>Masuk di sini</strong></a></p>
+      </div>
+    </div>
+    
+    <div class="text-center" style="margin-top: 30px; padding-bottom: 50px;">
+        <a href="index.html">&larr; Kembali ke Halaman Awal</a>
+    </div>
+
+  </div> <div id="reset-password-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="close-reset-modal">&times;</button>
+      <h3>Reset Password</h3>
+      <p class="text-center" style="margin-bottom: 25px;">Masukkan email dan password baru Anda.</p>
+      
+      <form id="reset-form">
+        <div class="form-group">
+          <label for="reset-email">Email</label>
+          <input type="email" id="reset-email" required>
+        </div>
+        <div class="form-group">
+          <label for="reset-new-password">Password Baru</label>
+          <input type="password" id="reset-new-password" required>
+        </div>
+        <div class="form-group">
+          <label for="reset-confirm-password">Konfirmasi Password Baru</label>
+          <input type="password" id="reset-confirm-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan Password Baru</button>
+      </form>
+    </div>
+  </div>
+
+
+  <a id="contact-admin-btn" class="floating-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339.4 55.6 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27.2 106.1 27.2h.1c122.3 0 224-99.6 224-222 0-59.3-25.2-115.4-67.1-157zm-157 .1c100.2 0 181.3 81.1 181.3 181.3S324.2 460.3 223.9 460.3c-33.8 0-66-9.3-93.1-25.5l-6.7-4-69.8 18.3L74 413.3l-4.4-6.9c-18.1-28.9-29.1-63.5-29.1-99.8 0-100.2 81.1-181.3 181.3-181.3zM223.9 111c-19.1 0-36.4 7.9-48.8 20.3-12.4 12.4-20.3 29.7-20.3 48.8v.1c.1 19.1 7.9 36.4 20.3 48.8 12.4 12.4 29.7 20.3 48.8 20.3s36.4-7.9 48.8-20.3c12.4-12.4 20.3-29.7 20.3-48.8v-.1c0-19.1-7.9-36.4-20.3-48.8-12.4-12.4-29.7-20.3-48.8-20.3zm0 159.2c-60.6 0-109.9 49.3-109.9 109.9s49.3 109.9 109.9 109.9 109.9-49.3 109.9-109.9-49.3-109.9-109.9-109.9zm0 181.3c-40.4 0-71.4-31-71.4-71.4s31-71.4 71.4-71.4 71.4 31 71.4 71.4-31 71.4-71.4 71.4z"/>
+    </svg>
+  </a>
+
+  <div id="admin-access-btn" class="floating-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M487.4 315.7c-15.2-15.2-37.9-15.2-53.1 0L398 352H352V313.1l36.3-36.3c15.2-15.2 15.2-37.9 0-53.1L352 187.5V160H313.1l-36.3 36.3c-15.2 15.2-37.9 15.2-53.1 0L187.5 160H160v39.1l36.3 36.3c15.2 15.2 15.2 37.9 0 53.1L160 324.2V352h39.1l36.3-36.3c15.2-15.2 37.9-15.2 53.1 0L324.2 352H352v36.3l-36.3 36.3c-15.2 15.2-15.2 37.9 0 53.1L352 512V512h50.7L487.4 430c15.2-15.2 15.2-37.9 0-53.1L430 315.7zM128 0C92.7 0 64 28.7 64 64v96C28.7 160 0 188.7 0 224v64c0 35.3 28.7 64 64 64h96c35.3 0 64-28.7 64-64v-64c0-35.3-28.7-64-64-64V64c0-35.3-28.7-64-64-64z"/>
+    </svg>
+  </div>
+  
+  
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+
+</body>
+</html>
