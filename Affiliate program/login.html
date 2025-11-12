@@ -11,13 +11,11 @@
 
   <div class="container auth-container">
 
-    <div id="login-form" class="auth-form">
+    <div id="login-form-container" class="auth-form">
       <h2 class="text-accent">Selamat Datang Kembali!</h2>
       <p class="text-center">Silahkan masuk untuk melanjutkan</p>
 
-      <form action="dashboard.html" method="get"> <input type="hidden" name="test-user" value="boys@gmail.com">
-        <input type="hidden" name="test-pass" value="bali2000">
-
+      <form id="login-form">
         <div class="form-group">
           <label for="login-email">Email</label>
           <input type="email" id="login-email" value="boys@gmail.com" required>
@@ -39,10 +37,11 @@
       </div>
     </div>
 
-    <div id="register-form" class="auth-form hidden"> <h2 class="text-accent">Gabung Gratis!</h2>
+    <div id="register-form-container" class="auth-form hidden"> <h2 class="text-accent">Gabung Gratis!</h2>
       <p class="text-center">Daftar sekarang, 100% Gratis.</p>
 
-      <form action="dashboard.html" method="get"> <div class="form-group">
+      <form id="register-form">
+        <div class="form-group">
           <label for="reg-username">Username</label>
           <input type="text" id="reg-username" required>
         </div>
